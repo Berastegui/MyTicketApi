@@ -32,6 +32,9 @@ classe : TicketFromTicketing <br/>
 peut être récupéré selon son id.<br/>
 contient les propriétés suivantes : 
 - prix
+- isDated
+- validityStartDate
+- validityEndDate
 
 ### le ticket qu'on veut récupérer
 classe : Ticket <br/>
@@ -41,6 +44,9 @@ doit contenir les propriété suivantes :
 - conditions
 - description
 - prix
+- isDated
+- validityStartDate
+- validityEndDate
 
 ## L'aggregator
 classe : TicketAggregator <br/>

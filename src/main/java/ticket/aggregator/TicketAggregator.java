@@ -6,6 +6,7 @@ import ticket.tickets.TicketId;
 import ticketing.api.TicketingTicketRepository;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class TicketAggregator {
@@ -26,5 +27,20 @@ public class TicketAggregator {
     public Ticket getTicket(TicketId id) {
         // TODO: implement method
         return null;
+    }
+
+    public List<Ticket> listDatedTickets() {
+        // TODO: implement method
+        return new ArrayList<Ticket>();
+    }
+
+    public List<Ticket> listUndatedTickets() {
+        // TODO: implement method
+        return new ArrayList<Ticket>();
+    }
+
+    public List<Ticket> listValidTickets(Date date) {
+        // TODO: implement method
+        return new ArrayList<Ticket>();
     }
 }

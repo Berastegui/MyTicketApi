@@ -10,9 +10,7 @@ import ticketing.api.TestTicketingRepository;
 import ticketing.api.TicketingTicketRepository;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Currency;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -60,7 +58,9 @@ class TicketAggregatorTest {
         BigDecimal priceValue = new BigDecimal(40);
         BigDecimal taxValue = new BigDecimal(4);
         Price price = new Price(priceValue, Currency.getInstance("EUR"), taxValue);
-        return new Ticket(id, price, label, conditions, description);
+        Date startDate = new Date(2022, 1, 1);
+        Date endDate = new Date(2022, 12, 31);
+        return new Ticket(id, price, label, conditions, description, true, startDate, endDate);
     }
 
     private Ticket getTicketFute() {
@@ -71,7 +71,9 @@ class TicketAggregatorTest {
         BigDecimal priceValue = new BigDecimal(50);
         BigDecimal taxValue = new BigDecimal(5);
         Price price = new Price(priceValue, Currency.getInstance("EUR"), taxValue);
-        return new Ticket(id, price, label, conditions, description);
+        Date startDate = new Date(2021, 1, 1);
+        Date endDate = new Date(2021, 12, 31);
+        return new Ticket(id, price, label, conditions, description, false, startDate, endDate);
     }
 
     private Ticket getTicketLiberte() {
@@ -82,7 +84,9 @@ class TicketAggregatorTest {
         String conditions = "Valable toute l'année même noël et halloween";
         String description = "Achetez votre billet maintenant pour venir quand vous le souhaitez, même les jours de fête";
         Price price = new Price(priceValue, Currency.getInstance("EUR"), taxValue);
-        return new Ticket(id, price, label, conditions, description);
+        Date startDate = new Date(2022, 1, 1);
+        Date endDate = new Date(2022, 12, 31);
+        return new Ticket(id, price, label, conditions, description, false, startDate, endDate);
     }
 
 

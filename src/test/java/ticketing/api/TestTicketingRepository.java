@@ -8,6 +8,7 @@ import ticketing.tickets.TicketFromTicketing;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Currency;
+import java.util.Date;
 import java.util.List;
 
 public class TestTicketingRepository implements TicketingTicketRepository {
@@ -34,7 +35,9 @@ public class TestTicketingRepository implements TicketingTicketRepository {
         BigDecimal priceValue = new BigDecimal(40);
         BigDecimal taxValue = new BigDecimal(4);
         Price price = new Price(priceValue, Currency.getInstance("EUR"), taxValue);
-        return new TicketFromTicketing(id, price);
+        Date startDate = new Date(2022, 1, 1);
+        Date endDate = new Date(2022, 12, 31);
+        return new TicketFromTicketing(id, price, true, startDate, endDate );
     }
 
     public TicketFromTicketing getTicketFute() {
@@ -42,7 +45,9 @@ public class TestTicketingRepository implements TicketingTicketRepository {
         BigDecimal priceValue = new BigDecimal(50);
         BigDecimal taxValue = new BigDecimal(5);
         Price price = new Price(priceValue, Currency.getInstance("EUR"), taxValue);
-        return new TicketFromTicketing(id, price);
+        Date startDate = new Date(2021, 1, 1);
+        Date endDate = new Date(2021, 12, 31);
+        return new TicketFromTicketing(id, price, false, startDate, endDate);
     }
 
     public TicketFromTicketing getTicketLiberte() {
@@ -50,6 +55,8 @@ public class TestTicketingRepository implements TicketingTicketRepository {
         BigDecimal priceValue = new BigDecimal(60);
         BigDecimal taxValue = new BigDecimal(6);
         Price price = new Price(priceValue, Currency.getInstance("EUR"), taxValue);
-        return new TicketFromTicketing(id, price);
+        Date startDate = new Date(2022, 1, 1);
+        Date endDate = new Date(2022, 12, 31);
+        return new TicketFromTicketing(id, price, false, startDate, endDate);
     }
 }

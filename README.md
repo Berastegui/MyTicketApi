@@ -15,7 +15,7 @@ Il s'agit de récupérer certaines données des tickets : label, conditions, des
 
 ### le ticketing
 interface du repo : TicketingTicketRepository <br/>
-Cela concerne le prix du ticket.
+Cela concerne le prix du ticket, le fait qu'il soit daté ou non et sa validité
 
 ## Les classes tickets
 
